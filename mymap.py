@@ -1,19 +1,20 @@
 #!/usr/bin/env python
-"""mapper.py"""
+# -*- coding: utf-8 -*-
+
+"""
+Created on 4/17/18 11:16 AM
+@author: Chen Liang
+@function:  word count mapper
+"""
 
 import sys
 
-# input comes from STDIN (standard input)
+# 从标准输入STDIN输入
 for line in sys.stdin:
-    # remove leading and trailing whitespace
+    # 移除line收尾的空白字符
     line = line.strip()
-    # split the line into words
-    words = line.split(' ')
-    # increase counters
-    for word in words:
-        # write the results to STDOUT (standard output);
-        # what we output here will be the input for the
-        # Reduce step, i.e. the input for reducer.py
-        #
-        # tab-delimited; the trivial word count is 1
-        print('%s\t%s' % (word, 1))
+    # 将line分割为单词
+    words = line.split()
+    # 遍历
+
+    print('{}\t{}\t{}'.format(words[1], words[7], words[8]))
